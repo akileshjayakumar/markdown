@@ -2,20 +2,6 @@
 
 This repository contains a collection of useful markdown files and shell scripts that can help streamline various tasks, such as GPG key setup, Docker management, and CUDA installation.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Contents](#contents)
-  - [Markdown Files](#markdown-files)
-  - [Shell Scripts](#shell-scripts)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Overview
-
-The purpose of this repository is to provide helpful documentation and scripts that can be easily reused across different projects. Whether you need to set up a GPG key, manage Docker containers, or install CUDA, this repository has you covered.
-
 ## Contents
 
 ### Markdown Files
@@ -52,7 +38,3 @@ Located in the `sh-files/` directory:
      ```bash
      ./script-name.sh
      ```
-
-## License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
