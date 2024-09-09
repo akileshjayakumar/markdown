@@ -1,4 +1,4 @@
-# Useful Markdown Files and Shell Scripts Repository
+# Useful MD Files and Shell Scripts
 
 This repository contains a collection of useful markdown files and shell scripts that can help streamline various tasks, such as GPG key setup, Docker management, and CUDA installation.
 
