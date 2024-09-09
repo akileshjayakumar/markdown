@@ -2,8 +2,6 @@
 
 This repository contains a collection of useful markdown files and shell scripts that can help streamline various tasks, such as GPG key setup, Docker management, and CUDA installation.
 
-## Contents
-
 ### Markdown Files
 
 - **gpg-key-instructions.md**: Detailed instructions on how to generate a GPG key, export it, and configure Git to sign your commits.
