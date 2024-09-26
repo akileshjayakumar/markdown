@@ -1,18 +1,3 @@
-#!/bin/bash
-# This script helps to do the initial installation (without post installation actions) for CUDA and also installs Docker.
-# It is simply for convenience and does NOT handle unexpected errors or changes in versions. 
-# Do refer to the official CUDA installation guide on NVIDIA's website for more detailed instructions.
-# Instructions on how to run:
-# 1. Make this executable with: chmod +x /path/to/this/sh
-# 2. Run: /path/to/this/sh
-
-# !!!!!!IMPORTANT!!!!!!!!!!!!! 
-# Assumed prerequisites: Ubuntu 22.04 on an x86_64 system.
-# If this .sh does not work, go to the following site and follow the steps to do installation: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
-# !!!!!!IMPORTANT!!!!!!!!!!!!! 
-
-
-# Warning message before continuing with the script.
 read -p "This script will uninstall any existing CUDA configuration and install it again. There will be at least one reboot of the system. Do you wish to continue? (y/n) " answer
 
 # Convert the answer to lowercase
