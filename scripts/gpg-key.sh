@@ -8,9 +8,9 @@ Subkey-Type: RSA
 Subkey-Length: 4096
 
 # User information
-Name-Real: [Your Full Name]
-Name-Comment: [Optional Comment]
-Name-Email: [your_email@example.com]
+Name-Real: "Your Full Name"
+Name-Comment: "Optional Comment"
+Name-Email: "your_email@example.com"
 
 # Expiration date (0 means no expiration)
 Expire-Date: 0
