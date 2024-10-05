@@ -35,7 +35,3 @@ The `/sh-files/` directory contains various shell scripts that automate tasks re
 
 - **gpg-key.sh**: Modify the script with your personal details before running it to generate a customized GPG key.
 - **CUDA Installation Scripts**: Ensure your system meets the necessary requirements, such as having a compatible NVIDIA GPU, before running these scripts.
-
-```
-
-```
