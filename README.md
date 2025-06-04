@@ -1,37 +1,25 @@
-# Useful Markdown Files and Shell Scripts
+# Markdown Guides and Scripts
 
-Welcome to this repository of useful markdown files and shell scripts. This collection is designed to simplify a variety of tasks, including GPU setup, Docker management, Git configuration, and CUDA installation. Below is a brief overview of the contents of this repository and how to use them.
+This repository offers markdown guides and shell scripts for GPU setup, Docker management, Git configuration, and CUDA installation.
 
-## Markdown Files
+## Documentation
 
-Markdown documentation is located in the `/docs` directory. These files provide instructions for setup and management of various tools and utilities:
+All guides live in `/docs`:
 
-- **gpg-key-instructions.md**  
-  Detailed instructions for generating and configuring GPG keys, including exporting keys and configuring Git to sign commits.
-
-- **install-git-LFS.md**  
-  A step-by-step guide to install and set up Git Large File Storage (LFS), which is essential for versioning large files in Git.
-
-- **useful-docker-commands.md**  
-  A reference sheet of commonly used Docker commands. This includes commands for managing containers, images, networks, and services.
-
-- **nvidia-container-toolkit-install.md**  
-  Instructions for installing the NVIDIA Container Toolkit, which allows Docker containers to access NVIDIA GPUs. This is essential for CUDA-based applications and machine learning workloads.
+- **gpg-key-instructions.md** – generate and configure GPG keys and sign commits.
+- **install-git-LFS.md** – install Git Large File Storage.
+- **useful-docker-commands.md** – reference of common Docker commands.
+- **nvidia-container-toolkit-install.md** – install the NVIDIA Container Toolkit.
 
 ## Shell Scripts
 
-The `/sh-files/` directory contains various shell scripts that automate tasks related to CUDA installation, GPG key generation, and more.
+Scripts are in `/scripts`:
 
-- **gpg-key.sh**  
-  A script to automate the creation of a GPG key using predefined parameters. You can modify it to include your own details, such as name and email.
-
-- **cuda_install_part1.sh**  
-  The first part of a multi-step process to install CUDA and set up a Docker environment for GPU-accelerated applications.
-
-- **cuda_install_part2.sh**  
-  The second script in the CUDA installation process. This completes the setup and verifies that CUDA is correctly installed.
+- **gpg-key.sh** – create a GPG key (update with your name and email).
+- **cuda_install_part1.sh** – start CUDA installation and prepare Docker for GPU workloads.
+- **cuda_install_part2.sh** – finish CUDA setup and verify installation.
 
 ### Customization
 
-- **gpg-key.sh**: Modify the script with your personal details before running it to generate a customized GPG key.
-- **CUDA Installation Scripts**: Ensure your system meets the necessary requirements, such as having a compatible NVIDIA GPU, before running these scripts.
+- Edit `gpg-key.sh` with your own details.
+- Confirm you have a compatible NVIDIA GPU before running the CUDA scripts.
