@@ -1,25 +1,64 @@
 # Markdown Guides and Scripts
 
-This repository offers markdown guides and shell scripts for GPU setup, Docker management, Git configuration, and CUDA installation.
+Linux-first setup notes and helper scripts for CUDA, Docker + NVIDIA runtime, GPG signing, and Git LFS.
 
-## Documentation
+## Quick Start
 
-All guides live in `/docs`:
+### Prerequisites
+- Ubuntu 22.04 (or compatible Debian-based distro for the CUDA scripts)
+- NVIDIA GPU + driver
+- `bash`, `gpg`, `git`, and `sudo` access
 
-- **gpg-key-instructions.md** – generate and configure GPG keys and sign commits.
-- **install-git-LFS.md** – install Git Large File Storage.
-- **useful-docker-commands.md** – reference of common Docker commands.
-- **nvidia-container-toolkit-install.md** – install the NVIDIA Container Toolkit.
+### Setup
+```bash
+git clone <your-repo-url>
+cd markdown
+chmod +x scripts/*.sh
+```
 
-## Shell Scripts
+### Run
+```bash
+# 1) Configure GPG key template (edit name/email first)
+gpg --batch --generate-key scripts/gpg-key.sh
 
-Scripts are in `/scripts`:
+# 2) CUDA and Docker runtime install (interactive + reboot required)
+bash scripts/cuda_install_part1.sh
+bash scripts/cuda_install_part2.sh
+```
 
-- **gpg-key.sh** – create a GPG key (update with your name and email).
-- **cuda_install_part1.sh** – start CUDA installation and prepare Docker for GPU workloads.
-- **cuda_install_part2.sh** – finish CUDA setup and verify installation.
+## Features
+- GPG key template for commit-signing setup.
+- Two-part CUDA + Docker/NVIDIA container runtime install flow.
+- Ready-to-scan docs for Git LFS, Docker commands, and NVIDIA toolkit setup.
 
-### Customization
+## Configuration
+- `scripts/gpg-key.sh`: set `Name-Real`, `Name-Email`, and optional `Name-Comment` before key generation.
 
-- Edit `gpg-key.sh` with your own details.
-- Confirm you have a compatible NVIDIA GPU before running the CUDA scripts.
+## Usage
+```bash
+# Verify GPU and CUDA toolchain after setup
+nvidia-smi
+nvcc --version
+
+# Verify Docker can access GPU
+sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
+```
+
+Docs for each workflow are in:
+- `docs/gpg-key-instructions.md`
+- `docs/install-git-LFS.md`
+- `docs/useful-docker-commands.md`
+- `docs/nvidia-container-toolkit-install.md`
+
+## Contributing and Testing
+```bash
+# Check shell syntax quickly
+bash -n scripts/gpg-key.sh
+bash -n scripts/cuda_install_part1.sh
+bash -n scripts/cuda_install_part2.sh
+```
+
+Open a PR with any fixes to scripts or docs and include the distro/GPU tested.
+
+## License
+Licensed under the `MIT` license. See [LICENSE](./LICENSE) for full text.
